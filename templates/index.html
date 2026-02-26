@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart PDF QA System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png?v=1">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="manifest" href="/static/site.webmanifest">
+</head>
+<script>
+    if (window.location.search) {
+        window.history.replaceState({}, document.title, "/");
+    }
+</script>
+<body>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold main-heading">📝 Smart PDF QA System</h1>
+            <p class="text-muted">Upload your PDF and ask intelligent questions</p>
+        </div>
+        <div class="card shadow p-4 mb-4">
+            <h4 class="mb-3">Upload PDF</h4>
+            <form method="post" action="/upload_pdf/" enctype="multipart/form-data">
+                <div class="d-flex gap-3">
+                    <input type="file" name="file" class="form-control" required>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </div>
+            </form>
+    
+            {% if upload_message %}
+            <div class="alert alert-success mt-3">
+                {{ upload_message }}
+            </div>
+            {% endif %}
+        </div>
+    
+        <div class="card shadow p-4 mb-4">
+            <h4 class="mb-3">Ask Question</h4>
+            <form method="post" action="/ask/">
+                <div class="d-flex gap-3">
+                    <input type="text" name="question" class="form-control" placeholder="Ask something..." required>
+                    <button type="submit" class="btn btn-success">Ask</button>
+                </div>
+            </form>
+        </div>
+    
+        {% if answer %}
+        <div class="card shadow p-4">
+            <h4 class="mb-3">Answer</h4>
+            <div class="alert alert-info fs-5" style="white-space: pre-wrap;">
+                {{ answer }}
+            </div>
+        </div>
+        {% endif %}
+    
+    </div>
+    </body>
+    </html>

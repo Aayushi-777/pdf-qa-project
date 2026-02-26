@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+hf_models/
+.cache/
+D:/hf_models/
+uploads/
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
