@@ -89,6 +89,7 @@ pip install -r requirements.txt
 ```bash
 uvicorn app:app --reload --port 8001 (choose whichever port as per choice)
 ```
+And open the link "http://127.0.0.1:8000"
 
 ## Technologies used
 
