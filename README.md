@@ -65,33 +65,33 @@ pdf_qa_project/
 
 ## 🛠️ Installation
 
-### Clone Repository
+### 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/Aayushi-777/pdf-qa-project.git
 cd pdf-qa-project
 ```
 
-### Create Virtual Environment
+### 2️⃣ Create Virtual Environment
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### Install Dependancies
+### 3️⃣ Install Dependancies
 
 ```bash
 pip install -r requirements.txt
 ```
-### Running the project
+### ▶️ Running the project
 
 ```bash
 uvicorn app:app --reload --port 8001 (choose whichever port as per choice)
 ```
 And open the link "http://127.0.0.1:8000"
 
-## Technologies used
+## 🧩 Technologies used
 
 python
 FastAPI
