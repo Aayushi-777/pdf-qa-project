@@ -84,6 +84,11 @@ venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+### Running the project
+
+```bash
+uvicorn app:app --reload --port 8001 (choose whichever port as per choice)
+```
 
 ## Technologies used
 
