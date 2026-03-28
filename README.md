@@ -1,6 +1,6 @@
 # Smart PDF Question Answering System (RAG-based)
 A Retrieval-Augmented Generation (RAG) based PDF question Answering system built using **FastAPI, FAISS, Sentence Transformers and HuggingFace Transformers**.
-This system allows users to upload a PDF document, ask contextual questions ans generate structured answers and summaries using Large Language Model.
+This system allows users to upload a PDF document, ask contextual questions and generate structured answers and summaries using Large Language Model.
 
 ---
 
